@@ -1,0 +1,1775 @@
+:root{
+
+    --primary:#C69C8A;
+    --primary-light:#E7D4CD;
+
+    --gold:#D4AF37;
+
+    --white:#FFFFFF;
+
+    --background:#FAF8F7;
+
+    --text:#333333;
+
+    --text-light:#777777;
+
+    --glass:rgba(255,255,255,.55);
+
+    --shadow:0 20px 60px rgba(0,0,0,.08);
+
+    --radius:20px;
+
+    --transition:.4s ease;
+
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1,h2,h3,h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+.section-title h2{
+
+    font-size:56px;
+
+    margin-top:15px;
+
+}
+
+.section-title p{
+
+    margin:auto;
+
+    margin-top:20px;
+
+    width:min(700px,90%);
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/* Couple names */
+
+.hero-content h1,
+.welcome-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(1180px,92%);
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    padding:120px 0;
+
+    position:relative;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button,
+.primary-btn,
+.event-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+button:hover,
+.primary-btn:hover,
+.event-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#b68470;
+
+    box-shadow:0 10px 30px rgba(198,156,138,.35);
+
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.timeline-card,
+.family-card,
+.event-card,
+.venue-card,
+.thankyou-card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f0f0f0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b68470;
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/*====================================================
+LUXURY INVITATION LOADER
+====================================================*/
+
+#loader{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow-y:auto;      /* ADD THIS */
+    padding:40px 20px;    /* ADD THIS */
+
+    background:
+    radial-gradient(circle at center,
+    #dfe7d5 0%,
+    #d1dcc8 45%,
+    #c7d4bc 100%);
+
+    z-index:99999;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.invitation-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+
+.invitation-card{
+    width:420px;
+    max-width:92%;
+    min-height:620px; /* fine to keep as a floor now */
+    height:auto;
+    position:relative;
+    border-radius:8px;
+    background:#bfcab4;
+    overflow:visible;   /* was hidden — was clipping the button */
+    box-shadow:0 35px 80px rgba(0,0,0,.25);
+}
+
+.envelope-top{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:55%;
+
+    background:#c8d3bf;
+
+    clip-path: polygon(0 0,100% 0,50% 100%);
+
+    box-shadow:
+
+    inset 0 -8px 20px rgba(0,0,0,.15);
+
+}
+
+.invitation-content{
+    position:relative;
+    padding:70px 30px 30px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+.invite-title{
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    color:#555;
+
+}
+
+
+.invitation-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    color:#333;
+
+    margin:10px 0;
+
+}
+
+.and{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:42px;
+
+    color:#8b7155;
+
+}
+
+.invite-text{
+
+    margin:25px 0;
+
+    line-height:1.9;
+
+    color:#444;
+
+}
+
+.invitation-content h2{
+
+    margin-bottom:35px;
+
+    color:#6b573d;
+
+}
+
+#openInvitation{
+
+    display:inline-block;
+
+    /* margin-top:30px; */
+
+    width:240px;
+
+    /* height:54px; */
+
+    background:#F6E7D3;
+
+    color:#6B573D;
+
+    border:none;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================================
+   MUSIC BUTTON
+========================================================== */
+
+.music-button{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    color:var(--primary);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+.music-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.music-button.playing{
+
+    animation:musicPulse 2s infinite;
+
+}
+
+/* ==========================================================
+   WELCOME SCREEN
+========================================================== */
+
+#welcome{
+
+    height:100vh;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.welcome-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:heroZoom 18s linear infinite alternate;
+
+}
+
+.welcome-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(255,255,255,.30),
+
+        rgba(255,255,255,.72)
+
+    );
+
+}
+
+.welcome-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    padding:25px;
+
+}
+
+.welcome-content h3{
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+}
+
+.welcome-content h1{
+
+    font-size:88px;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+    color:#593f36;
+
+}
+
+.welcome-content h1 span{
+
+    display:block;
+
+    font-size:58px;
+
+    margin:18px 0;
+
+}
+
+.welcome-content p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.welcome-content h2{
+
+    margin:40px 0;
+
+    font-size:42px;
+
+    color:var(--gold);
+
+}
+
+#welcome button{
+
+    padding:18px 48px;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    z-index:9998;
+
+    transition:.4s;
+
+}
+
+nav.scrolled{
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:38px;
+
+    color:var(--primary);
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+#hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+    padding-bottom: 100px;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:heroZoom 20s linear infinite alternate;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(255,255,255,.35),
+
+        rgba(255,255,255,.75)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+.hero-content h4{
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:var(--primary);
+
+    margin-bottom:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:96px;
+
+    color:#5a4038;
+
+    line-height:1.1;
+
+}
+
+.hero-content .heart{
+
+    font-size:56px;
+
+    color:#d66c8f;
+
+    margin:20px 0;
+
+    animation:heartbeat 2s infinite;
+
+}
+
+.hero-content p{
+
+    margin-top:35px;
+
+    font-size:28px;
+
+    letter-spacing:2px;
+
+    color:#555;
+
+}
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+.scroll-indicator{
+
+    margin:70px auto 0;
+
+    width:34px;
+
+    height:58px;
+
+    border:2px solid #999;
+
+    border-radius:50px;
+
+    position:relative;
+
+}
+
+.scroll-indicator span{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:12px;
+
+    width:6px;
+
+    height:10px;
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+    animation:scrollDown 2s infinite;
+
+}
+
+/* ==========================================================
+   INVITATION SECTION
+========================================================== */
+
+#invitation{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #faf7f6
+    );
+
+}
+
+#invitation .container{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+#invitation p{
+
+    font-size:18px;
+
+    color:var(--text-light);
+
+    line-height:2;
+
+    margin-top:20px;
+
+}
+
+.parents{
+
+    margin:60px 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.parents div{
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.7);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.parents div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.parents h3{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+}
+
+.parents p{
+
+    margin:18px 0;
+
+    font-size:26px;
+
+    color:var(--gold);
+
+}
+
+/* ==========================================================
+   COUNTDOWN
+========================================================== */
+
+#countdown{
+
+    background:#fff;
+
+}
+
+.countdown-wrapper{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.countdown-card{
+
+    width:190px;
+
+    height:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.countdown-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.countdown-card h1{
+
+    font-size:68px;
+
+    color:var(--primary);
+
+}
+
+.countdown-card span{
+
+    margin-top:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+   STORY
+========================================================== */
+
+#story{
+
+    background:linear-gradient(
+        180deg,
+        #faf8f7,
+        #ffffff
+    );
+
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding-top:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:3px;
+
+    background:var(--primary-light);
+
+    top:0;
+
+    bottom:0;
+
+}
+
+.timeline-item{
+
+    width:50%;
+
+    position:relative;
+
+    padding:25px 45px;
+
+}
+
+.timeline-item.left{
+
+    left:0;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+}
+
+.timeline-card{
+
+    padding:35px;
+
+    position:relative;
+
+}
+
+.timeline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:var(--primary);
+
+    border-radius:50%;
+
+    top:45px;
+
+}
+
+.timeline-item.left .timeline-card::before{
+
+    right:-54px;
+
+}
+
+.timeline-item.right .timeline-card::before{
+
+    left:-54px;
+
+}
+
+.timeline-date{
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
+}
+
+.timeline-card h3{
+
+    margin:18px 0;
+
+    font-size:34px;
+
+}
+
+.timeline-card p{
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   PARENTS
+========================================================== */
+
+#parents{
+
+    background:#fff;
+
+}
+
+.parents-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:45px;
+
+}
+
+.family-card{
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.family-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.family-card img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    margin:35px auto;
+
+    border-radius:50%;
+
+    border:8px solid rgba(255,255,255,.8);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.12);
+
+}
+
+.family-card h3{
+
+    font-size:38px;
+
+    color:var(--primary);
+
+}
+
+.family-card h4{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+}
+
+.family-card p{
+
+    margin:15px 0;
+
+    font-size:24px;
+
+    color:var(--gold);
+
+}
+
+/* ==========================================================
+   EVENTS
+========================================================== */
+
+#events{
+
+    background:linear-gradient(
+        180deg,
+        #faf8f7,
+        #ffffff
+    );
+
+}
+
+.event-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.event-card{
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    border:1px solid rgba(198,156,138,.15);
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.10);
+
+}
+
+.event-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--gold)
+    );
+
+    color:#fff;
+
+    font-size:30px;
+
+}
+
+.event-card h3{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.event-date{
+
+    color:var(--gold);
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+}
+
+.event-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+
+}
+
+.event-btn{
+
+    margin-top:25px;
+
+}
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+#gallery{
+
+    background:#fff;
+
+}
+
+.gallerySwiper{
+
+    margin-top:60px;
+
+    padding-bottom:60px;
+
+}
+
+.gallerySwiper .swiper-slide{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.gallerySwiper img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+}
+
+.gallerySwiper img:hover{
+
+    transform:scale(1.08);
+
+}
+
+.swiper-pagination-bullet{
+
+    width:12px;
+
+    height:12px;
+
+    background:var(--primary);
+
+    opacity:.4;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   VENUE
+========================================================== */
+
+#venue{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #faf8f7
+    );
+
+}
+
+.venue-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.venue-card h3{
+
+    font-size:44px;
+
+    margin-bottom:25px;
+
+    color:var(--primary);
+
+}
+
+.venue-card p{
+
+    color:var(--text-light);
+
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
+
+.venue-card iframe{
+
+    width:100%;
+
+    height:450px;
+
+    margin:40px 0;
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================================
+   THANK YOU
+========================================================== */
+
+#thankyou{
+
+    background:#fff;
+
+}
+
+.thankyou-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:70px;
+
+    text-align:center;
+
+}
+
+.thankyou-card h2{
+
+    font-size:54px;
+
+    margin-bottom:30px;
+
+}
+
+.thankyou-card p{
+
+    font-size:19px;
+
+    color:var(--text-light);
+
+    line-height:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.thankyou-card h3{
+
+    margin-top:45px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#2d2d2d;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:72px;
+
+    color:#ffffff;
+
+}
+
+footer p{
+
+    margin-top:18px;
+
+    color:#dddddd;
+
+}
+
+.socials{
+
+    margin:40px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+}
+
+.socials a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.socials a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+.copyright{
+
+    margin-top:35px;
+
+    font-size:14px;
+
+    opacity:.8;
+
+}
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
+
+#scrollTop{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:110px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+#scrollTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-5px);
+
+    background:#b68470;
+
+}
+
+/* ==========================================================
+   DECORATIVE BACKGROUNDS
+========================================================== */
+
+section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(212,175,55,.08),
+        transparent 70%
+    );
+
+    top:30px;
+
+    left:30px;
+
+    pointer-events:none;
+
+}
+
+section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(198,156,138,.08),
+        transparent 70%
+    );
+
+    right:30px;
+
+    bottom:30px;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   FLOATING ROSE PETALS
+========================================================== */
+
+#petals-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+.rose-petal{
+
+    position:absolute;
+
+    top:-60px;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    will-change:transform,opacity;
+
+    animation-name:petals;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:1;
+
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.12));
+
+}

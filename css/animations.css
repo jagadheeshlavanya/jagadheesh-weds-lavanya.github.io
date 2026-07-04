@@ -1,0 +1,493 @@
+/* ======================================================
+        LUXURY WEDDING ANIMATIONS
+====================================================== */
+
+/* ----------------------------
+        LOADER
+----------------------------- */
+
+@keyframes loading{
+
+    from{
+
+        transform:translateX(-220px);
+
+    }
+
+    to{
+
+        transform:translateX(220px);
+
+    }
+
+}
+
+/* ----------------------------
+      HERO ZOOM
+----------------------------- */
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+/* ----------------------------
+      HEART BEAT
+----------------------------- */
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    20%{
+
+        transform:scale(1.2);
+
+    }
+
+    40%{
+
+        transform:scale(.95);
+
+    }
+
+    60%{
+
+        transform:scale(1.18);
+
+    }
+
+    80%{
+
+        transform:scale(.98);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ----------------------------
+      MUSIC BUTTON
+----------------------------- */
+
+@keyframes musicPulse{
+
+    0%{
+
+        box-shadow:
+        0 0 0 0 rgba(198,156,138,.45);
+
+    }
+
+    70%{
+
+        box-shadow:
+        0 0 0 18px rgba(198,156,138,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 0 rgba(198,156,138,0);
+
+    }
+
+}
+
+/* ----------------------------
+        SCROLL
+----------------------------- */
+
+@keyframes scrollDown{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,20px);
+
+    }
+
+}
+
+/* ----------------------------
+        FLOAT
+----------------------------- */
+
+@keyframes float{
+
+    0%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* ----------------------------
+      FADE UP
+----------------------------- */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* ----------------------------
+      FADE DOWN
+----------------------------- */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* ----------------------------
+      FADE LEFT
+----------------------------- */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+/* ----------------------------
+      FADE RIGHT
+----------------------------- */
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+/* ----------------------------
+        SCALE
+----------------------------- */
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ----------------------------
+      SHIMMER
+----------------------------- */
+
+@keyframes shimmer{
+
+    0%{
+
+        background-position:-400px;
+
+    }
+
+    100%{
+
+        background-position:400px;
+
+    }
+
+}
+
+/* ----------------------------
+      PETALS
+----------------------------- */
+
+@keyframes petals{
+
+    0%{
+
+        transform:
+
+        translateY(-120px)
+
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(120vh)
+
+        rotate(720deg)
+
+        translateX(140px);
+
+        opacity:.1;
+
+    }
+
+}
+
+/* ----------------------------
+     GLASS SHINE
+----------------------------- */
+
+@keyframes glass{
+
+    from{
+
+        left:-150%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+/* ----------------------------
+      WAVE
+----------------------------- */
+
+@keyframes wave{
+
+    0%{
+
+        transform:rotate(0);
+
+    }
+
+    25%{
+
+        transform:rotate(8deg);
+
+    }
+
+    50%{
+
+        transform:rotate(0);
+
+    }
+
+    75%{
+
+        transform:rotate(-8deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0);
+
+    }
+
+}
+
+/* ----------------------------
+       ROTATE
+----------------------------- */
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ----------------------------
+      BOUNCE
+----------------------------- */
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ----------------------------
+       GLOW
+----------------------------- */
+
+@keyframes glow{
+
+    0%{
+
+        text-shadow:none;
+
+    }
+
+    50%{
+
+        text-shadow:
+
+        0 0 15px rgba(212,175,55,.6),
+
+        0 0 30px rgba(212,175,55,.3);
+
+    }
+
+    100%{
+
+        text-shadow:none;
+
+    }
+
+}

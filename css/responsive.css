@@ -1,0 +1,855 @@
+/* ==========================================================
+   RESPONSIVE STYLES
+   Part 1 - Desktop / Tablet
+========================================================== */
+
+/* ===========================
+   <=1200px
+=========================== */
+
+@media (max-width:1200px){
+
+    .container{
+        width:min(95%,1100px);
+    }
+
+    .hero-content h1{
+        font-size:82px;
+    }
+
+    .welcome-content h1{
+        font-size:78px;
+    }
+
+    .section-title h2{
+        font-size:48px;
+    }
+
+    .timeline{
+        max-width:900px;
+    }
+
+    .gallerySwiper img{
+        height:420px;
+    }
+
+}
+
+/* ===========================
+   <=992px
+=========================== */
+
+@media (max-width:992px){
+
+    section{
+        padding:90px 0;
+    }
+
+    nav{
+
+        padding:20px 5%;
+
+    }
+
+    nav ul{
+
+        gap:22px;
+
+    }
+
+    .logo{
+
+        font-size:32px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:72px;
+
+    }
+
+    .welcome-content h1{
+
+        font-size:68px;
+
+    }
+
+    .hero-content p{
+
+        font-size:22px;
+
+    }
+
+    .section-title h2{
+
+        font-size:42px;
+
+    }
+
+    .countdown-wrapper{
+
+        gap:20px;
+
+    }
+
+    .countdown-card{
+
+        width:160px;
+
+        height:160px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:58px;
+
+    }
+
+    .parents{
+
+        gap:25px;
+
+    }
+
+    .parents-grid{
+
+        gap:25px;
+
+    }
+
+    .event-grid{
+
+        grid-template-columns:1fr;
+
+        max-width:600px;
+
+        margin:auto;
+
+        margin-top:60px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:380px;
+
+    }
+
+    .venue-card{
+
+        padding:40px;
+
+    }
+
+}
+
+/* ===========================
+   <=768px
+=========================== */
+
+@media (max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:18px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .welcome-content{
+
+        padding:20px;
+
+    }
+
+    .welcome-content h3{
+
+        font-size:16px;
+
+        letter-spacing:2px;
+
+    }
+
+    .welcome-content h1{
+
+        font-size:54px;
+
+    }
+
+    .welcome-content h2{
+
+        font-size:30px;
+
+    }
+
+    .welcome-content p{
+
+        font-size:17px;
+
+    }
+
+    #welcome button{
+
+        padding:15px 34px;
+
+        font-size:16px;
+
+    }
+
+    .hero-content h4{
+
+        font-size:14px;
+
+        letter-spacing:3px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-content .heart{
+
+        font-size:42px;
+
+    }
+
+    .hero-content p{
+
+        font-size:20px;
+
+    }
+
+    .section-title{
+
+        margin-bottom:45px;
+
+    }
+
+    .section-title h2{
+
+        font-size:36px;
+
+    }
+
+    .section-title p{
+
+        font-size:16px;
+
+    }
+
+    .parents{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .parents-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .family-card img{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .timeline::before{
+
+        left:25px;
+
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        left:0 !important;
+
+        padding-left:70px;
+
+        padding-right:15px;
+
+        margin-bottom:30px;
+
+    }
+
+    .timeline-card::before{
+
+        left:-54px !important;
+
+    }
+
+    .timeline-card{
+
+        padding:25px;
+
+    }
+
+    .timeline-card h3{
+
+        font-size:28px;
+
+    }
+
+    .countdown-card{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:48px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:320px;
+
+    }
+
+    .venue-card iframe{
+
+        height:320px;
+
+    }
+
+    .thankyou-card{
+
+        padding:45px 25px;
+
+    }
+
+    .thankyou-card h2{
+
+        font-size:40px;
+
+    }
+
+    .thankyou-card h3{
+
+        font-size:54px;
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE STYLES
+   Part 2 - Mobile Phones
+========================================================== */
+
+/* ===========================
+   <=576px
+=========================== */
+
+@media (max-width:576px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+    nav{
+
+        padding:15px 10px;
+
+    }
+
+    .logo{
+
+        font-size:30px;
+
+    }
+
+    nav ul{
+
+        gap:10px;
+
+    }
+
+    nav ul li a{
+
+        font-size:14px;
+
+    }
+
+    .music-button{
+
+        width:52px;
+
+        height:52px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:18px;
+
+    }
+
+    .welcome-content h1{
+
+        font-size:46px;
+
+        line-height:1.15;
+
+    }
+
+    .welcome-content h1 span{
+
+        font-size:38px;
+
+    }
+
+    .welcome-content h2{
+
+        font-size:26px;
+
+    }
+
+    .welcome-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:46px;
+
+    }
+
+    .hero-content h4{
+
+        font-size:13px;
+
+        letter-spacing:2px;
+
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+    }
+
+    .hero-content .heart{
+
+        font-size:36px;
+
+    }
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+    .parents div{
+
+        padding:30px 20px;
+
+    }
+
+    .parents h3{
+
+        font-size:28px;
+
+    }
+
+    .family-card{
+
+        padding:25px;
+
+    }
+
+    .family-card h3{
+
+        font-size:30px;
+
+    }
+
+    .family-card h4{
+
+        font-size:22px;
+
+    }
+
+    .family-card img{
+
+        width:160px;
+
+        height:160px;
+
+    }
+
+    .countdown-wrapper{
+
+        gap:15px;
+
+    }
+
+    .countdown-card{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:42px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:55px;
+
+    }
+
+    .timeline-card{
+
+        padding:22px;
+
+    }
+
+    .timeline-card h3{
+
+        font-size:24px;
+
+    }
+
+    .timeline-card p{
+
+        font-size:15px;
+
+    }
+
+    .event-card{
+
+        padding:30px 22px;
+
+    }
+
+    .event-card h3{
+
+        font-size:28px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:260px;
+
+    }
+
+    .venue-card{
+
+        padding:25px;
+
+    }
+
+    .venue-card h3{
+
+        font-size:32px;
+
+    }
+
+    .venue-card iframe{
+
+        height:260px;
+
+    }
+
+    .thankyou-card{
+
+        padding:35px 20px;
+
+    }
+
+    .thankyou-card h2{
+
+        font-size:32px;
+
+    }
+
+    .thankyou-card h3{
+
+        font-size:44px;
+
+    }
+
+    footer h2{
+
+        font-size:52px;
+
+    }
+
+    .socials{
+
+        gap:15px;
+
+    }
+
+    .socials a{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    #scrollTop{
+
+        width:48px;
+
+        height:48px;
+
+        right:18px;
+
+        bottom:82px;
+
+    }
+
+}
+
+/* ===========================
+   <=480px
+=========================== */
+
+@media (max-width:480px){
+
+    .welcome-content h1{
+
+        font-size:40px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:40px;
+
+    }
+
+    .section-title h2{
+
+        font-size:28px;
+
+    }
+
+    .countdown-card{
+
+        width:115px;
+
+        height:115px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:36px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:230px;
+
+    }
+
+}
+
+/* ===========================
+   <=390px
+=========================== */
+
+@media (max-width:390px){
+
+    nav ul{
+
+        gap:8px;
+
+    }
+
+    nav ul li a{
+
+        font-size:13px;
+
+    }
+
+    .welcome-content h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .welcome-content h2{
+
+        font-size:22px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .countdown-wrapper{
+
+        justify-content:center;
+
+    }
+
+    .countdown-card{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:30px;
+
+    }
+
+    .countdown-card span{
+
+        font-size:12px;
+
+    }
+
+    .family-card img{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:200px;
+
+    }
+
+    .venue-card iframe{
+
+        height:220px;
+
+    }
+
+}
+
+/* ===========================
+   <=320px
+=========================== */
+
+@media (max-width:320px){
+
+    html{
+
+        font-size:14px;
+
+    }
+
+    .welcome-content h1{
+
+        font-size:30px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:30px;
+
+    }
+
+    .welcome-content p{
+
+        font-size:14px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+    .section-title h2{
+
+        font-size:24px;
+
+    }
+
+    .countdown-card{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .countdown-card h1{
+
+        font-size:26px;
+
+    }
+
+    .gallerySwiper img{
+
+        height:180px;
+
+    }
+
+}
