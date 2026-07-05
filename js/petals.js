@@ -4,7 +4,7 @@
 
 const container = document.getElementById("petals-container");
 
-const symbols = [
+/* const symbols = [
     "❤",
     "♥",
     "💕",
@@ -13,6 +13,10 @@ const symbols = [
     "💘",
     "💞",
     "🤍"
+]; */
+
+const symbols = [
+    "💞", "💖"
 ];
 
 function createHeart() {

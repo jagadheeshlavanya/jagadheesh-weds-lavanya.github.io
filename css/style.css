@@ -711,7 +711,7 @@ nav a:hover{
    HERO
 ========================================================== */
 
-/* #hero{
+#hero{
 
     min-height:100vh;
 
@@ -768,13 +768,13 @@ nav a:hover{
 
     z-index:2;
 
-} */
+}
 
 /* ==========================================================
    HERO SECTION
 ========================================================== */
 
-#hero{
+/* #hero{
     position:relative;
     width:100%;
     min-height:100svh;
@@ -789,9 +789,9 @@ nav a:hover{
     inset:0;
     width:100%;
     height:100%;
-    object-fit:contain;          /* Shows the complete image */
+    object-fit:contain;          
     object-position:center center;
-    background:#000;             /* Fills empty space if image ratio differs */
+    background:#000;             
     z-index:0;
 }
 
@@ -811,7 +811,7 @@ nav a:hover{
     width:100%;
     padding:0 20px;
     text-align:center;
-}
+} */
 
 .hero-content h4{
 
