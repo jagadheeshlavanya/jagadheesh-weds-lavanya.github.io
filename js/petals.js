@@ -1,67 +1,53 @@
 /* ==========================================================
-   PREMIUM FLOATING ROSE PETALS
+   FLOATING HEARTS & LOVE SYMBOLS
 ========================================================== */
 
-const petalsContainer = document.getElementById("petals-container");
+const container = document.getElementById("petals-container");
 
-if (petalsContainer) {
+const symbols = [
+    "❤",
+    "♥",
+    "💕",
+    "💖",
+    "💗",
+    "💘",
+    "💞",
+    "🤍"
+];
 
-    const petals = [
-        "🌸",
-        "🌺",
-        "🌹",
-        "💮"
-    ];
+function createHeart() {
 
-    function createPetal() {
+    const heart = document.createElement("span");
 
-        const petal = document.createElement("span");
+    heart.className = "floating-heart";
 
-        petal.className = "rose-petal";
+    heart.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
 
-        petal.innerHTML =
-            petals[Math.floor(Math.random() * petals.length)];
+    heart.style.left = Math.random() * 100 + "vw";
 
-        const size = Math.random() * 18 + 18;
+    heart.style.fontSize = (18 + Math.random() * 22) + "px";
 
-        petal.style.fontSize = `${size}px`;
+    heart.style.animationDuration =
+        (8 + Math.random() * 6) + "s";
 
-        petal.style.left = `${Math.random() * 100}%`;
+    heart.style.animationDelay =
+        Math.random() * 2 + "s";
 
-        const duration = Math.random() * 8 + 10;
+    heart.style.opacity =
+        0.5 + Math.random() * 0.5;
 
-        petal.style.animationDuration = `${duration}s`;
+    heart.style.transform =
+        `rotate(${Math.random() * 360}deg)`;
 
-        const delay = Math.random() * 2;
+    container.appendChild(heart);
 
-        petal.style.animationDelay = `${delay}s`;
+    setTimeout(() => {
 
-        petal.style.opacity =
-            (Math.random() * 0.5 + 0.4).toFixed(2);
+        heart.remove();
 
-        petal.style.transform =
-            `rotate(${Math.random() * 360}deg)`;
-
-        petalsContainer.appendChild(petal);
-
-        setTimeout(() => {
-
-            petal.remove();
-
-        }, (duration + delay) * 1000);
-
-    }
-
-    // Initial petals
-
-    for (let i = 0; i < 20; i++) {
-
-        setTimeout(createPetal, i * 300);
-
-    }
-
-    // Keep generating petals
-
-    setInterval(createPetal, 700);
+    }, 15000);
 
 }
+
+setInterval(createHeart, 350);
