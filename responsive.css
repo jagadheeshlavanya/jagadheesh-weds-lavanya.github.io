@@ -1,0 +1,128 @@
+/* ==========================================================
+   RESPONSIVE STYLES — mobile-first refinements
+   (base style.css is already fluid; these tune breakpoints)
+========================================================== */
+
+/* Mobile menu toggle — hidden on desktop */
+.nav-toggle{
+    display:none;
+    width:44px;height:44px;border:none;cursor:pointer;background:transparent;
+    flex-direction:column;justify-content:center;gap:6px;z-index:950;
+}
+.nav-toggle span{
+    display:block;width:26px;height:2px;border-radius:2px;background:currentColor;
+    transition:transform .35s ease, opacity .35s ease;
+}
+nav:not(.scrolled) .nav-toggle{color:#fff}
+nav.scrolled .nav-toggle{color:var(--wine)}
+nav.open .nav-toggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+nav.open .nav-toggle span:nth-child(2){opacity:0}
+nav.open .nav-toggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ===========================  <=1200px  =========================== */
+@media (max-width:1200px){
+    .container{width:min(94%,1100px)}
+    .hero-content h1{font-size:80px}
+    .section-title h2{font-size:48px}
+    .gallerySwiper img{height:430px}
+}
+
+/* ===========================  <=992px  =========================== */
+@media (max-width:992px){
+    section{padding:90px 0}
+    .hero-content h1{font-size:66px}
+    .hero-content p{font-size:20px}
+    .section-title h2{font-size:42px}
+    .timeline::before{left:22px}
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right{width:100%;left:0;padding:16px 0 16px 56px}
+    .timeline-item.left::after,
+    .timeline-item.right::after{left:12px;right:auto}
+    .gallerySwiper img{height:400px}
+}
+
+/* ===========================  <=768px — MOBILE MENU  =========================== */
+@media (max-width:768px){
+    nav{padding:16px 6%}
+    nav.scrolled{padding:12px 6%}
+    .nav-toggle{display:flex}
+    nav ul{
+        position:fixed;inset:0 0 0 auto;width:min(78%,320px);
+        flex-direction:column;justify-content:center;align-items:center;gap:28px;
+        background:linear-gradient(160deg,#4a2d34,#7d3b46);
+        transform:translateX(100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
+        box-shadow:-20px 0 60px rgba(0,0,0,.35);padding:40px;
+    }
+    nav.open ul{transform:translateX(0)}
+    nav ul li a,
+    nav:not(.scrolled) ul li a{color:#fff;font-size:19px;text-shadow:none}
+    nav ul li a::after{background:var(--gold-light)}
+
+    #invitation .container{padding:44px 26px}
+    .parents{gap:22px}
+    .countdown-card{min-width:0;flex:1 1 40%;padding:22px 12px}
+    .countdown-card h1{font-size:44px}
+    .thankyou-card h2{font-size:32px}
+    .thankyou-card h3{font-size:34px}
+    footer h2{font-size:38px}
+    .gallerySwiper img{height:340px}
+    .venue-card iframe{height:280px}
+}
+
+/* ===========================  <=576px — SMALL PHONES  =========================== */
+@media (max-width:576px){
+    section{padding:70px 0}
+    .section-title{margin-bottom:44px}
+    .section-title span{font-size:28px}
+    .section-title h2{font-size:34px}
+    .hero-content h4{font-size:11px;letter-spacing:.3em}
+    .hero-content h1{font-size:50px}
+    .hero-content .heart{font-size:26px}
+    .hero-content p{font-size:17px}
+
+    .invitation-card{padding:54px 24px 42px}
+    .invitation-content h1{font-size:36px}
+
+    #invitation .container{padding:36px 20px}
+    #invitation > .container > p{font-size:15px}
+    .parents > div{min-width:100%;padding:20px}
+    .parents h3{font-size:20px}
+
+    .countdown-wrapper{gap:14px}
+    .countdown-card{flex:1 1 42%;padding:18px 8px}
+    .countdown-card h1{font-size:38px}
+    .countdown-card span{font-size:10px;letter-spacing:.15em}
+
+    .timeline-card{padding:22px 20px}
+    .timeline-card h3{font-size:23px}
+
+    .family-card img{width:150px;height:150px}
+    .event-card{padding:36px 24px}
+    .venue-card{padding:34px 22px}
+    .venue-card h3{font-size:26px}
+    .venue-card iframe{height:240px}
+
+    .thankyou-card{padding:44px 24px}
+    .thankyou-card h2{font-size:27px}
+    .thankyou-card h3{font-size:28px}
+    footer h2{font-size:30px}
+
+    .music-button{width:48px;height:48px;bottom:20px;left:20px;font-size:18px}
+    #scrollTop{width:46px;height:46px;bottom:20px;right:20px}
+    .gallerySwiper img{height:300px}
+}
+
+/* ===========================  <=380px — VERY SMALL  =========================== */
+@media (max-width:380px){
+    .hero-content h1{font-size:42px}
+    .invitation-content h1{font-size:31px}
+    .countdown-card h1{font-size:32px}
+    .section-title h2{font-size:29px}
+}
+
+/* Landscape phones: shrink hero so content fits */
+@media (max-height:520px) and (orientation:landscape){
+    #hero{height:auto;min-height:100svh;padding:110px 0 60px}
+    .scroll-indicator{display:none}
+}
