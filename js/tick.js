@@ -5,7 +5,7 @@
 ========================================================== */
 
 (function () {
-    let enabled = true;
+    let enabled = false;
     let armed = false;
 
     const btn = document.getElementById("tickToggle");
