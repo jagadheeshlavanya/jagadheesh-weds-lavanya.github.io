@@ -491,3 +491,26 @@
     }
 
 }
+/* ======================================================
+   APPLIED ANIMATIONS + AOS SAFETY FALLBACK
+====================================================== */
+
+/* If AOS never initializes (CDN blocked), reveal content anyway */
+.no-aos [data-aos]{opacity:1!important;transform:none!important}
+
+/* Gentle entrance for cards when they scroll into view via .in-view */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease, transform .9s ease}
+.reveal.in-view{opacity:1;transform:none}
+
+/* Shimmering gold text helper */
+.shimmer-text{
+    background:linear-gradient(120deg,var(--gold-deep),var(--gold-light),var(--gold-deep));
+    background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    animation:shimmer 4s linear infinite;
+}
+
+/* Soft glow pulse on the couple names in hero */
+#hero .hero-content h1{animation:glow 5s ease-in-out infinite}
+
+/* Section title flourish already animated in style.css */

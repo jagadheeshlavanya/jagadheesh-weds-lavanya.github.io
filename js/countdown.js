@@ -69,6 +69,8 @@ function updateCountdown() {
     minutesElement.textContent = String(minutes).padStart(2, "0");
     secondsElement.textContent = String(seconds).padStart(2, "0");
 
+    if (typeof window.__tick === "function") window.__tick();
+
 }
 
 // Initial Load

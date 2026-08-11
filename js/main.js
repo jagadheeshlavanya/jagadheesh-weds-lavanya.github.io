@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof AOS !== "undefined") {
 
+        document.body.classList.remove("no-aos");
+
         AOS.init({
 
             duration: 1000,
@@ -191,19 +193,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof gsap !== "undefined") {
 
-        gsap.from(".section-title", {
+        try {
 
-            opacity: 0,
+            gsap.from(".section-title", {
 
-            y: 40,
+                opacity: 0,
 
-            stagger: 0.15,
+                y: 40,
 
-            duration: 1,
+                stagger: 0.15,
 
-            ease: "power3.out"
+                duration: 1,
 
-        });
+                ease: "power3.out"
+
+            });
+
+        } catch (e) { /* no-op */ }
 
     }
 
