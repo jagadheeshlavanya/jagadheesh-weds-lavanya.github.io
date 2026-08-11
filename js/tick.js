@@ -16,7 +16,7 @@
      * IMPORTANT:
      * Change this path if your MP3 is stored somewhere else.
      */
-    const tickAudio = new Audio("assets/audio/clock-tick.mp3");
+    const tickAudio = new Audio("assets/tick/clock-tick.mp3");
 
     tickAudio.preload = "auto";
 
