@@ -621,3 +621,13 @@ footer .copyright{font-size:13px;color:rgba(255,255,255,.55);margin-top:20px}
 /* countdown already has a dark gradient bg; let hearts float above it */
 #countdown .section-3d{z-index:1;opacity:.9}
 #countdown::before{z-index:0}
+
+
+
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
