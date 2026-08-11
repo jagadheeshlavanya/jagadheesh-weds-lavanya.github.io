@@ -2,7 +2,7 @@
    PREMIUM GALLERY (Swiper)
 ========================================================== */
 
-const gallerySwiper = new Swiper(".gallerySwiper", {
+const gallerySwiper = (typeof Swiper !== "undefined") ? new Swiper(".gallerySwiper", {
 
     loop: true,
 
@@ -98,7 +98,7 @@ const gallerySwiper = new Swiper(".gallerySwiper", {
 
     }
 
-});
+}) : null;
 
 /* ==========================================================
    IMAGE HOVER EFFECT
@@ -125,6 +125,8 @@ document.querySelectorAll(".gallerySwiper img").forEach((image) => {
 ========================================================== */
 
 document.addEventListener("visibilitychange", () => {
+
+    if (!gallerySwiper || !gallerySwiper.autoplay) return;
 
     if (document.hidden) {
 

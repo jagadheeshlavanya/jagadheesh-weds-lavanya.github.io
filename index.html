@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>
         Rayudu Jagadheesh ❤️ Dommeti Lavanya Sai
@@ -58,7 +58,8 @@
 
 </head>
 
-<body>
+<body class="no-aos">
+    <canvas id="scene3d"></canvas>
     <div id="petals-container"></div>
 
 <div id="loader">
@@ -116,6 +117,10 @@
 
 </div>
 
+<button class="tick-toggle" id="tickToggle" aria-pressed="true" title="Mute tick sound">
+    <i class="fa-solid fa-droplet"></i>
+</button>
+
 <audio id="bgMusic" loop>
 
     <source
@@ -133,6 +138,12 @@
         RJ ❤️ LS
 
     </div>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <ul>
 
@@ -203,11 +214,13 @@
     <img
 
 
-        src="assets/images/hero-.JPG"
+        src="assets/images/hero-couple.jpg"
 
         class="hero-image"
 
-        alt="Couple">
+        alt="Jagadheesh and Lavanya walking together on the beach"
+
+        loading="eager">
 
     <div class="hero-content">
 
@@ -257,9 +270,14 @@
 
 <!-- ================================= -->
 
-<section id="invitation">
+<section id="invitation" class="has-bg">
 
 <div class="container">
+
+<img src="assets/images/invitation-couple.jpg"
+     class="invitation-photo"
+     alt="Jagadheesh and Lavanya"
+     loading="lazy" width="600" height="900">
 
 <div class="section-title">
 
@@ -407,7 +425,7 @@ even more memorable.
 <!-- OUR JOURNEY -->
 <!-- ================================= -->
 
-<section id="story">
+<section id="story" class="has-bg">
 
     <div class="container">
 
@@ -418,6 +436,12 @@ even more memorable.
             <h2>A Love Written By Destiny</h2>
 
         </div>
+
+        <img src="assets/images/story-couple.jpg"
+             class="story-photo"
+             alt="Jagadheesh and Lavanya"
+             loading="lazy" width="1280" height="853"
+             data-aos="fade-up">
 
         <div class="timeline">
 
@@ -582,7 +606,7 @@ even more memorable.
 <!-- EVENTS -->
 <!-- ================================= -->
 
-<section id="events">
+<section id="events" class="has-bg">
 
     <div class="container">
 
@@ -593,6 +617,12 @@ even more memorable.
             <h2>Event Schedule</h2>
 
         </div>
+
+        <!-- <img src="assets/images/events-couple.jpg"
+             class="events-photo"
+             alt="Jagadheesh and Lavanya"
+             loading="lazy" width="1280" height="853"
+             data-aos="fade-up"> -->
 
         <div class="event-grid">
 
@@ -749,8 +779,8 @@ even more memorable.
             <h2>Our Gallery</h2>
 
             <p>
-                Every picture tells a beautiful story. Replace these
-                placeholders with your own cherished moments.
+                Every picture tells a beautiful story from our journey
+                together.
             </p>
 
         </div>
@@ -760,34 +790,43 @@ even more memorable.
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <img src="assets/images/gallery1.jpg" alt="Gallery">
+                    <img src="assets/images/gallery1.jpg" alt="Jagadheesh and Lavanya walking together" loading="lazy" width="666" height="1000">
                 </div>
 
                 <div class="swiper-slide">
-                    <!-- <img src="assets/images/gallery2.jpg" alt="Gallery"> -->
-                     <img src="assets/images/IMG_2900.jpg" alt="Gallery">
+                    <img src="assets/images/gallery2.jpg" alt="Jagadheesh and Lavanya on a garden path" loading="lazy" width="666" height="1000">
                 </div>
 
                 <div class="swiper-slide">
-                    <!-- <img src="assets/images/gallery3.jpg" alt="Gallery"> -->
-                    <img src="assets/images/APIU6862 (1).jpg" alt="Gallery">
+                    <img src="assets/images/gallery3.jpg" alt="Jagadheesh and Lavanya on a wooden bridge" loading="lazy" width="666" height="1000">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="assets/images/gallery4.jpg" alt="Gallery">
+                    <img src="assets/images/gallery4.jpg" alt="Jagadheesh and Lavanya at the temple steps" loading="lazy" width="666" height="1000">
                 </div>
 
                 <div class="swiper-slide">
-                    <!-- <img src="assets/images/gallery5.jpg" alt="Gallery"> -->
-                     <img src="assets/images/IMG_8412.jpeg" alt="Gallery">
+                    <img src="assets/images/gallery5.jpg" alt="Jagadheesh and Lavanya on a staircase" loading="lazy" width="666" height="1000">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="assets/images/gallery6.jpg" alt="Gallery">
+                    <img src="assets/images/gallery6.jpg" alt="Jagadheesh and Lavanya at the beach" loading="lazy" width="1000" height="666">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="assets/images/gallery7.jpg" alt="Gallery">
+                    <img src="assets/images/gallery7.jpg" alt="Jagadheesh and Lavanya laughing together" loading="lazy" width="666" height="1000">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/gallery8.jpg" alt="Jagadheesh and Lavanya on a hill road" loading="lazy" width="666" height="1000">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/gallery9.jpg" alt="Jagadheesh and Lavanya at dusk" loading="lazy" width="1000" height="666">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/gallery10.jpg" alt="Jagadheesh and Lavanya smiling" loading="lazy" width="1000" height="666">
                 </div>
 
             </div>
@@ -804,7 +843,7 @@ even more memorable.
 <!-- VENUE -->
 <!-- ================================= -->
 
-<section id="venue">
+<section id="venue" class="has-bg">
 
     <div class="container">
 
@@ -817,6 +856,11 @@ even more memorable.
         </div>
 
         <div class="venue-card" data-aos="zoom-in">
+
+            <!-- <img src="assets/images/venue-couple.jpg"
+                 class="venue-photo"
+                 alt="Jagadheesh and Lavanya"
+                 loading="lazy" width="1280" height="853"> -->
 
             <h3>Nelaturu SitaRama Kalyana Mandapam</h3>
 
@@ -880,11 +924,16 @@ even more memorable.
 <!-- THANK YOU -->
 <!-- ================================= -->
 
-<section id="thankyou">
+<section id="thankyou" class="has-bg">
 
     <div class="container">
 
         <div class="thankyou-card">
+
+            <img src="assets/images/thankyou-couple.jpg"
+                 class="thankyou-photo"
+                 alt="Jagadheesh and Lavanya"
+                 loading="lazy" width="1280" height="853">
 
             <h2>
 
@@ -1000,6 +1049,8 @@ even more memorable.
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <!-- ================================= -->
 <!-- JAVASCRIPT -->
 <!-- ================================= -->
@@ -1012,9 +1063,17 @@ even more memorable.
 
 <script src="js/music.js"></script>
 
+<script src="js/scene3d.js"></script>
+
+<script src="js/scene-sections.js"></script>
+
 <script src="js/loader.js"></script>
 
 <script src="js/petals.js"></script>
+
+<script src="js/nav.js"></script>
+
+<script src="js/tick.js"></script>
 
 </body>
 
