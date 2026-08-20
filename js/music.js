@@ -1,12 +1,17 @@
 /* ==========================================================
    BACKGROUND MUSIC TOGGLE
-========================================================== */
+   ========================================================== */
 (function () {
     const musicButton = document.getElementById("musicButton");
     const bgMusic = document.getElementById("bgMusic");
     if (!musicButton || !bgMusic) return;
 
     bgMusic.volume = 0.6;
+
+    // Ensure music is OFF by default on page load
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    musicButton.classList.remove("playing");
 
     musicButton.addEventListener("click", () => {
         if (bgMusic.paused) {
